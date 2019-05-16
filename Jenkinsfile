@@ -4,7 +4,7 @@ pipeline {
       pollSCM('* * * * *')
   }
   stages {
-    stage('Stop  previous Docker container') {
+    stage('Stop previous Docker container for development') {
         when {
             branch 'Development'
         }
@@ -14,7 +14,7 @@ pipeline {
         }
     }
 
-  stage('Run app in Docker container') {
+  stage('Run app in Docker container for development') {
       when {
           branch 'Development'
       }
@@ -51,6 +51,7 @@ pipeline {
         agent any 
         steps {
             sh 'echo hello'
+            sh 'gcloud app deploy'
         }
     }
   }
