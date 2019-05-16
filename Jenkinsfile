@@ -51,7 +51,6 @@ pipeline {
         agent any 
         steps {
             sh 'echo hello'
-            sh 'gcloud app deploy'
         }
     }
   }
