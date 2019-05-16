@@ -4,7 +4,7 @@ pipeline {
       pollSCM('* * * * *')
   }
   stages {
-    stage('Stop previous Docker container') {
+    stage('Stop  previous Docker container') {
         agent any 
         steps {
             sh 'docker exec -i Docker_example pkill node || true && docker stop Docker_example || true && docker rm Docker_example || true'
