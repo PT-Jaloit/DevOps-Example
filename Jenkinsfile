@@ -4,7 +4,7 @@ pipeline {
       pollSCM('* * * * *')
   }
   stages {
-    stage('Run tests') {
+    stage('Build application') {
         agent {
           docker {
             image 'node:8-alpine'
