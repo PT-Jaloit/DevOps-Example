@@ -5,7 +5,7 @@ pipeline {
   }
   environment {
         GOOGLE_PROJECT_ID = 'turing-citizen-239109';
-        GOOGLE_SERVICE_ACCOUNT_KEY = credentials('turing-citizen-239109');
+        GOOGLE_SERVICE_ACCOUNT_KEY = credentials('My Project 16126');
   }
   stages {
     stage('Run tests') {
